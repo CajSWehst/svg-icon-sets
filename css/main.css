@@ -29,7 +29,7 @@ h1, h2 {
 }
 
 h1 {
-  padding-top: 6vmin;
+  padding: 6vmin;
 }
 
 h2 {
@@ -47,21 +47,20 @@ h1, h2, h3 {
 
 section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  margin: 0;
-  padding: 6vmin;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6vmin;
 }
 
 article {
-  padding: 1rem;
-  margin: 1.5rem;
+  padding: 0 1rem;
 }
 
 a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   color: #fff;
   text-decoration: none;
 }
@@ -72,10 +71,15 @@ a {
   font-size: 1.125rem;
 }
 
+a:hover,
+a:focus {
+  color: rgba(255, 255, 255, .7);
+}
+
 .icon {
   position: relative;
-  height: 8em;
-  width: 8em;
+  height: 8rem;
+  width: 8rem;
 }
 
 .icon svg {
@@ -85,4 +89,17 @@ a {
   top: 0;
   width: 100%;
   fill: currentColor;
+}
+
+@media only screen and (min-width: 38em) {
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 0 1rem;
+    margin: 1.5rem 0;
+    gap: 6vmin;
+  }
+
 }
