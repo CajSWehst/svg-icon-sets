@@ -17,23 +17,32 @@ html {
 
 body {
   margin: 0;
+  padding: 6vmin;
 }
 
-h1, h2 {
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 6vmin;
+}
+
+h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 0;
+  padding: 0;
   font-size: 2rem;
-  padding: 1rem;
-}
-
-h1 {
-  padding: 6vmin;
 }
 
 h2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
   font-size: 1.5rem;
+  padding: 1rem;
 }
 
 h3 {
@@ -43,17 +52,6 @@ h3 {
 
 h1, h2, h3 {
   color: #fff;
-}
-
-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 6vmin;
-}
-
-article {
-  padding: 0 1rem;
 }
 
 a {
@@ -96,10 +94,20 @@ a:focus {
   section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     justify-items: center;
-    padding: 0 1rem;
-    margin: 1.5rem 0;
     gap: 6vmin;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  article {
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
 }
